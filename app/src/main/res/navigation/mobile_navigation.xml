@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home_container">
+
+    <fragment
+        android:id="@+id/navigation_home_container"
+        android:name="com.syaiful.moviecatalogue.fragment.HomeContainerFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_container"
+        />
+
+    <fragment
+        android:id="@+id/navigation_fav_container"
+        android:name="com.syaiful.moviecatalogue.fragment.FavContainerFragment"
+        android:label="@string/title_fav"
+        tools:layout="@layout/fragment_fav_container"/>
+
+</navigation>
