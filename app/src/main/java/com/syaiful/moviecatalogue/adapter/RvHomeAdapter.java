@@ -16,7 +16,7 @@ import com.syaiful.moviecatalogue.model.Movie;
 
 import java.util.ArrayList;
 
-public class RvMovieAdapter extends RecyclerView.Adapter<RvMovieAdapter.ListViewHolder> {
+public class RvHomeAdapter extends RecyclerView.Adapter<RvHomeAdapter.ListViewHolder> {
     private ArrayList<Movie> listMovie = new ArrayList<>();
 
     public void setData(ArrayList<Movie> movie) {

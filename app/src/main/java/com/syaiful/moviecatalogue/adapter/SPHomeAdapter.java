@@ -10,11 +10,11 @@ import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.fragment.HomeContainerFragment;
 import com.syaiful.moviecatalogue.fragment.MovieFragment;
 
-public class SectionsPagerAdapterMovie extends FragmentPagerAdapter {
+public class SPHomeAdapter extends FragmentPagerAdapter {
 
     private final HomeContainerFragment mContext;
 
-    public SectionsPagerAdapterMovie(HomeContainerFragment context, FragmentManager fm) {
+    public SPHomeAdapter(HomeContainerFragment context, FragmentManager fm) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
     }

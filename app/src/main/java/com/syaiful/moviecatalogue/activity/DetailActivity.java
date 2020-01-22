@@ -1,7 +1,5 @@
 package com.syaiful.moviecatalogue.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,15 +11,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.database.MovieHelper;
 import com.syaiful.moviecatalogue.model.Movie;
 
+import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.DESCRIPTION;
 import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.POSTER;
 import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.TITLE;
-import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.DESCRIPTION;
 import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.TYPE;
 
 public class DetailActivity extends AppCompatActivity {
@@ -31,6 +31,7 @@ public class DetailActivity extends AppCompatActivity {
     public static final int RESULT_ADD = 101;
     public static final int REQUEST_UPDATE = 200;
     public static final int RESULT_DELETE = 301;
+    public static final int RESULT_ADD_DELETE = 401;
     private ProgressBar progressBar;
     private TextView txtName, txtDescription;
     private ImageView imgPoster;
@@ -38,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
     private String name, description, poster, type;
     private MovieHelper movieHelper;
     private boolean isFav = false;
+    private boolean isRemoveClicked = false;
     private int position;
 
     @Override
@@ -55,16 +57,9 @@ public class DetailActivity extends AppCompatActivity {
         movieHelper = MovieHelper.getInstance(getApplicationContext());
         movieHelper.open();
 
-
-
+        movie = getIntent().getParcelableExtra(EXTRA_MOVIE);
         String actionBarTitle = "Catalogue Detail";
 
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setTitle(actionBarTitle);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
-        movie = getIntent().getParcelableExtra(EXTRA_MOVIE);
         position = getIntent().getIntExtra(EXTRA_POSITION,0);
 
         if (movie != null) {
@@ -79,8 +74,26 @@ public class DetailActivity extends AppCompatActivity {
                     .apply(new RequestOptions().override(500, 1000))
                     .into(imgPoster);
 
+            actionBarTitle = changeActionBar(type, actionBarTitle);
+
             hideLoading();
         }
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setTitle(actionBarTitle);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    private String changeActionBar(String type, String actionBarTitle){
+        String movie = "movie";
+        String tv = "tv";
+        if(type.equals(movie)){
+            actionBarTitle = getResources().getString(R.string.detail_movie_title);
+        } else if(type.equals(tv)){
+            actionBarTitle = getResources().getString(R.string.detail_tv_title) ;
+        }
+        return actionBarTitle;
     }
 
     @Override
@@ -137,25 +150,31 @@ public class DetailActivity extends AppCompatActivity {
 
         if(result > 0){
             isFav = true;
-            item.setIcon(R.drawable.ic_dashboard_black_24dp);
-            setResult(RESULT_ADD, intent);
-            Toast.makeText(DetailActivity.this, "Ditambahkan ke favorit", Toast.LENGTH_SHORT).show();
+            item.setIcon(R.drawable.ic_fav_remove);
+            if(isRemoveClicked == false){
+                setResult(RESULT_ADD, intent);
+            } else {
+                setResult(RESULT_ADD_DELETE, intent);
+            }
+            Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_add_fav), Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(DetailActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_add_fav_failed), Toast.LENGTH_SHORT).show();
         }
     }
 
     private void removeFav(MenuItem item){
         Intent intent = new Intent();
         intent.putExtra(EXTRA_POSITION, position);
+
         long result = MovieHelper.deleteByName(movie.getName());
         if(result > 0){
             isFav = false;
-            item.setIcon(R.drawable.ic_notifications_black_24dp);
+            isRemoveClicked = true;
+            item.setIcon(R.drawable.ic_fav_add);
             setResult(RESULT_DELETE, intent);
-            Toast.makeText(DetailActivity.this, "Dihapus dari favorit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav), Toast.LENGTH_SHORT).show();
         } else{
-            Toast.makeText(DetailActivity.this, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav_failed), Toast.LENGTH_SHORT).show();
         }
     }
 

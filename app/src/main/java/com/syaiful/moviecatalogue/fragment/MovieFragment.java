@@ -3,6 +3,11 @@ package com.syaiful.moviecatalogue.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,15 +17,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.activity.DetailActivity;
-import com.syaiful.moviecatalogue.adapter.RvMovieAdapter;
+import com.syaiful.moviecatalogue.adapter.RvHomeAdapter;
 import com.syaiful.moviecatalogue.model.Movie;
 import com.syaiful.moviecatalogue.viewmodel.MovieViewModel;
 
@@ -32,7 +31,7 @@ import java.util.ArrayList;
 public class MovieFragment extends Fragment {
     private RecyclerView rvMovies;
     private MovieViewModel movieViewModel;
-    private RvMovieAdapter adapter;
+    private RvHomeAdapter adapter;
     private ProgressBar progressBar;
     private static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -107,10 +106,10 @@ public class MovieFragment extends Fragment {
 
     private void showRecyclerList() {
         rvMovies.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new RvMovieAdapter();
+        adapter = new RvHomeAdapter();
         adapter.notifyDataSetChanged();
         rvMovies.setAdapter(adapter);
-        adapter.setOnItemClickCallback(new RvMovieAdapter.OnItemClickCallback() {
+        adapter.setOnItemClickCallback(new RvHomeAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Movie movie) {
                 showSelectedMovie(movie);

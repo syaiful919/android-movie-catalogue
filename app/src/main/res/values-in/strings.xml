@@ -8,8 +8,16 @@
 
     <string name="tab_movie_title">Film</string>
     <string name="tab_tv_title">Acara TV</string>
+    <string name="detail_movie_title">Detail Film</string>
+    <string name="detail_tv_title">Detail Acara TV</string>
     <string name="title_home">Beranda</string>
     <string name="title_fav">Favorit</string>
+
+    <string name="toast_add_fav">Ditambahkan ke favorit</string>
+    <string name="toast_add_fav_failed">Gagal menambah data</string>
+    <string name="toast_remove_fav">Dihapus dari favorit</string>
+    <string name="toast_remove_fav_failed">Gagal menghapus data</string>
+    <string name="sb_no_data">Belum ada data</string>
 
     <string-array name="movie_names">
         <item>My Hero Academia: Two Heroes</item>
