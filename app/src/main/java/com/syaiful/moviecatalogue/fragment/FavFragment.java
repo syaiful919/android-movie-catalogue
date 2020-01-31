@@ -10,7 +10,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +25,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.activity.DetailActivity;
 import com.syaiful.moviecatalogue.adapter.RvFavAdapter;
-import com.syaiful.moviecatalogue.database.DbMovieContract;
-import com.syaiful.moviecatalogue.database.MovieHelper;
 import com.syaiful.moviecatalogue.helper.MappingHelper;
 import com.syaiful.moviecatalogue.model.Movie;
 

@@ -105,9 +105,6 @@ public class MovieHelper {
     }
 
     public boolean checkValue(Movie movie){
-//        String id = String.valueOf(movie.getId());
-//        Log.d(">>> idd", id);
-//        Cursor cursor = queryById(id);
         Cursor cursor = queryByName(movie.getName());
         if (cursor.getCount() <= 0) {
             cursor.close();

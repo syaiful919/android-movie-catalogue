@@ -2,7 +2,6 @@ package com.syaiful.moviecatalogue.activity;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +19,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.database.MovieHelper;
-import com.syaiful.moviecatalogue.helper.MappingHelper;
 import com.syaiful.moviecatalogue.model.Movie;
 
 import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.CONTENT_URI;
@@ -157,7 +155,6 @@ public class DetailActivity extends AppCompatActivity {
         Uri result = getContentResolver().insert(CONTENT_URI, values);
 
         if(result != null){
-            Log.d(">>> buat update", values.toString());
             isFav = true;
             item.setIcon(R.drawable.ic_fav_remove);
             if(isRemoveClicked == false){
