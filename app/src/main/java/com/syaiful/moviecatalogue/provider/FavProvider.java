@@ -5,13 +5,11 @@ import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.syaiful.moviecatalogue.database.MovieHelper;
-import com.syaiful.moviecatalogue.model.Movie;
 
 import static com.syaiful.moviecatalogue.database.DbMovieContract.AUTHORITY;
 import static com.syaiful.moviecatalogue.database.DbMovieContract.MovieColumns.CONTENT_URI;
@@ -21,8 +19,6 @@ public class FavProvider extends ContentProvider {
     private static final int MOVIE = 1;
     private static final int MOVIE_TYPE = 2;
     private static final int MOVIE_NAME = 3;
-    private MovieHelper movieHelper;
-
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
@@ -36,6 +32,8 @@ public class FavProvider extends ContentProvider {
                 TABLE_NAME + "/*",
                 MOVIE_NAME);
     }
+
+    private MovieHelper movieHelper;
 
     public FavProvider() {
     }
@@ -99,7 +97,7 @@ public class FavProvider extends ContentProvider {
         int deleted;
         switch (sUriMatcher.match(uri)){
             case MOVIE_NAME:
-                deleted = movieHelper.deleteByName(uri.getLastPathSegment());
+                deleted = MovieHelper.deleteByName(uri.getLastPathSegment());
                 break;
             default:
                 deleted = 0;

@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,7 +64,7 @@ public class DetailActivity extends AppCompatActivity {
 
         String actionBarTitle = "Catalogue Detail";
 
-        position = getIntent().getIntExtra(EXTRA_POSITION,0);
+        position = getIntent().getIntExtra(EXTRA_POSITION, 0);
 
         if (movie != null) {
 
@@ -85,19 +84,19 @@ public class DetailActivity extends AppCompatActivity {
             hideLoading();
         }
 
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(actionBarTitle);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 
-    private String changeActionBar(String type, String actionBarTitle){
+    private String changeActionBar(String type, String actionBarTitle) {
         String movie = "movie";
         String tv = "tv";
-        if(type.equals(movie)){
+        if (type.equals(movie)) {
             actionBarTitle = getResources().getString(R.string.detail_movie_title);
-        } else if(type.equals(tv)){
-            actionBarTitle = getResources().getString(R.string.detail_tv_title) ;
+        } else if (type.equals(tv)) {
+            actionBarTitle = getResources().getString(R.string.detail_tv_title);
         }
         return actionBarTitle;
     }
@@ -105,9 +104,9 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         isFav = movieHelper.checkValue(movie);
-        if(isFav){
+        if (isFav) {
             getMenuInflater().inflate(R.menu.menu_detail_removefav, menu);
-        } else{
+        } else {
             getMenuInflater().inflate(R.menu.menu_detail_addfav, menu);
         }
 
@@ -127,8 +126,8 @@ public class DetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void favoriteAction(MenuItem item){
-        if(isFav){
+    private void favoriteAction(MenuItem item) {
+        if (isFav) {
             this.removeFav(item);
         } else {
             this.addFav(item);
@@ -136,7 +135,7 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
-    private void addFav(MenuItem item){
+    private void addFav(MenuItem item) {
         name = movie.getName();
         description = movie.getDescription();
         poster = movie.getPoster();
@@ -154,10 +153,10 @@ public class DetailActivity extends AppCompatActivity {
 
         Uri result = getContentResolver().insert(CONTENT_URI, values);
 
-        if(result != null){
+        if (result != null) {
             isFav = true;
             item.setIcon(R.drawable.ic_fav_remove);
-            if(isRemoveClicked == false){
+            if (isRemoveClicked == false) {
                 setResult(RESULT_ADD, intent);
             } else {
                 setResult(RESULT_ADD_DELETE, intent);
@@ -168,20 +167,20 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    private void removeFav(MenuItem item){
+    private void removeFav(MenuItem item) {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_POSITION, position);
 
         uriWithName = Uri.parse(CONTENT_URI + "/" + movie.getName());
         int result = getContentResolver().delete(uriWithName, null, null);
 
-        if(result > 0){
+        if (result > 0) {
             isFav = false;
             isRemoveClicked = true;
             item.setIcon(R.drawable.ic_fav_add);
             setResult(RESULT_DELETE, intent);
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav), Toast.LENGTH_SHORT).show();
-        } else{
+        } else {
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav_failed), Toast.LENGTH_SHORT).show();
         }
     }
