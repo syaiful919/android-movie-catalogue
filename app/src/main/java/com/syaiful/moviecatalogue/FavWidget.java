@@ -16,6 +16,7 @@ public class FavWidget extends AppWidgetProvider {
 
     private static final String TOAST_ACTION = "com.syaiful.moviecatalogue.TOAST_ACTION";
     public static final String EXTRA_ITEM = "com.syaiful.moviecatalogue.EXTRA_ITEM";
+    public static final String EXTRA_TITLE = "com.syaiful.moviecatalogue.EXTRA_TITLE";
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
@@ -61,8 +62,8 @@ public class FavWidget extends AppWidgetProvider {
         super.onReceive(context, intent);
         if(intent.getAction() != null){
             if(intent.getAction().equals(TOAST_ACTION)){
-                int viewIndex = intent.getIntExtra(EXTRA_ITEM, 0);
-                Toast.makeText(context, "Touched view " + viewIndex, Toast.LENGTH_SHORT).show();
+                String Title = intent.getStringExtra(EXTRA_TITLE);
+                Toast.makeText(context, Title, Toast.LENGTH_SHORT).show();
             }
         }
     }

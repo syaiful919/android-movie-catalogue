@@ -3,7 +3,6 @@ package com.syaiful.moviecatalogue.activity;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,20 +33,17 @@ public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_MOVIE = "extra_movie";
     public static final String EXTRA_POSITION = "extra_position";
-    public static final int RESULT_ADD = 101;
     public static final int REQUEST_UPDATE = 200;
+    public static final int RESULT_ADD = 101;
     public static final int RESULT_DELETE = 301;
     public static final int RESULT_ADD_DELETE = 401;
     private ProgressBar progressBar;
-    private TextView txtName, txtDescription;
-    private ImageView imgPoster;
     private Movie movie;
     private String name, description, poster, type;
     private MovieHelper movieHelper;
     private boolean isFav = false;
     private boolean isRemoveClicked = false;
     private int position;
-    private Uri uriWithName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +53,9 @@ public class DetailActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         showLoading();
 
-        txtName = findViewById(R.id.txt_name_detail);
-        txtDescription = findViewById(R.id.txt_description_detail);
-        imgPoster = findViewById(R.id.img_poster_detail);
+        TextView txtName = findViewById(R.id.txt_name_detail);
+        TextView txtDescription = findViewById(R.id.txt_description_detail);
+        ImageView imgPoster = findViewById(R.id.img_poster_detail);
 
         movieHelper = MovieHelper.getInstance(getApplicationContext());
         movieHelper.open();
@@ -160,7 +156,7 @@ public class DetailActivity extends AppCompatActivity {
         if (result != null) {
             isFav = true;
             item.setIcon(R.drawable.ic_fav_remove);
-            if (isRemoveClicked == false) {
+            if (!isRemoveClicked) {
                 setResult(RESULT_ADD, intent);
             } else {
                 setResult(RESULT_ADD_DELETE, intent);
@@ -176,7 +172,7 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_POSITION, position);
 
-        uriWithName = Uri.parse(CONTENT_URI + "/" + movie.getName());
+        Uri uriWithName = Uri.parse(CONTENT_URI + "/" + movie.getName());
         int result = getContentResolver().delete(uriWithName, null, null);
 
         if (result > 0) {
@@ -192,9 +188,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void updateWidget() {
-        Context context = getApplicationContext();
-        AppWidgetManager widgetManager = AppWidgetManager.getInstance(context);
-        ComponentName componentName = new ComponentName(context, FavWidget.class);
+        AppWidgetManager widgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        ComponentName componentName = new ComponentName(getApplicationContext(), FavWidget.class);
         int[] idAppWidget = widgetManager.getAppWidgetIds(componentName);
         widgetManager.notifyAppWidgetViewDataChanged(idAppWidget, R.id.stack_view);
     }
