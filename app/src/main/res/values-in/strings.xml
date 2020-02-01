@@ -100,4 +100,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="appwidget_text">My Favorite Movie</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="add_widget">Add widget</string>
+
 </resources>

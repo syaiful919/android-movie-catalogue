@@ -1,6 +1,9 @@
 package com.syaiful.moviecatalogue.activity;
 
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.syaiful.moviecatalogue.FavWidget;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.database.MovieHelper;
 import com.syaiful.moviecatalogue.model.Movie;
@@ -161,6 +165,7 @@ public class DetailActivity extends AppCompatActivity {
             } else {
                 setResult(RESULT_ADD_DELETE, intent);
             }
+            updateWidget();
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_add_fav), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_add_fav_failed), Toast.LENGTH_SHORT).show();
@@ -179,10 +184,19 @@ public class DetailActivity extends AppCompatActivity {
             isRemoveClicked = true;
             item.setIcon(R.drawable.ic_fav_add);
             setResult(RESULT_DELETE, intent);
+            updateWidget();
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(DetailActivity.this, getResources().getString(R.string.toast_remove_fav_failed), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void updateWidget() {
+        Context context = getApplicationContext();
+        AppWidgetManager widgetManager = AppWidgetManager.getInstance(context);
+        ComponentName componentName = new ComponentName(context, FavWidget.class);
+        int[] idAppWidget = widgetManager.getAppWidgetIds(componentName);
+        widgetManager.notifyAppWidgetViewDataChanged(idAppWidget, R.id.stack_view);
     }
 
     private void showLoading() {
