@@ -1,4 +1,4 @@
-package com.syaiful.moviecatalogue;
+package com.syaiful.moviecatalogue.widget;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,10 @@ import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import com.bumptech.glide.Glide;
+import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.helper.MappingHelper;
 import com.syaiful.moviecatalogue.model.Movie;
+import com.syaiful.moviecatalogue.widget.FavWidget;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;

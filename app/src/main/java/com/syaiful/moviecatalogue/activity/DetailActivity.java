@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.syaiful.moviecatalogue.FavWidget;
+import com.syaiful.moviecatalogue.widget.FavWidget;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.database.MovieHelper;
 import com.syaiful.moviecatalogue.model.Movie;

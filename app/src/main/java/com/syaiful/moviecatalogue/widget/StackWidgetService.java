@@ -1,7 +1,9 @@
-package com.syaiful.moviecatalogue;
+package com.syaiful.moviecatalogue.widget;
 
 import android.content.Intent;
 import android.widget.RemoteViewsService;
+
+import com.syaiful.moviecatalogue.widget.StackRemoteViewsFactory;
 
 public class StackWidgetService extends RemoteViewsService {
     @Override
