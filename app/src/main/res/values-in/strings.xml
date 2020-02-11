@@ -97,11 +97,21 @@
         <item>https://image.tmdb.org/t/p/w1280/6awFumOfwyh3IEIY0SWLKTygXM9.jpg</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
     <string name="appwidget_text">My Favorite Movie</string>
-    <string name="empty_text">NO DATA</string>
+    <string name="empty_text">Tidak ada data</string>
     <string name="add_widget">Add widget</string>
+    <string name="setting">Pengaturan</string>
+    <string name="change_lang">Pengaturan Bahasa</string>
+    <string name="change_lang_sub">Ubah Bahasa</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="daily_reminder_sub">Pengingat untuk kembali ke aplikasi</string>
+    <string name="daily_release">Pengingat Rilis</string>
+    <string name="daily_release_sub">Pengingat rilis hari ini</string>
+    <string name="reminder_activated">Pengingat diaktifkan</string>
+    <string name="reminder_disabled">Pengingat dinonaktifkan</string>
+    <string name="release_notif">rilis hari ini!</string>
+    <string name="miss_notif">Movie Catalogue kangen kamu!</string>
 
 </resources>

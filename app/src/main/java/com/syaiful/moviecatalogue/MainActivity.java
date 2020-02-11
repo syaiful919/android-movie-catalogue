@@ -2,7 +2,6 @@ package com.syaiful.moviecatalogue;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,6 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.syaiful.moviecatalogue.activity.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_change_settings) {
-            Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
-            startActivity(mIntent);
+            Intent settingIntent = new Intent(this, SettingActivity.class);
+            startActivity(settingIntent);
         }
         return super.onOptionsItemSelected(item);
     }

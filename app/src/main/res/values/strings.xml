@@ -96,10 +96,24 @@
         <item>https://image.tmdb.org/t/p/w1280/6awFumOfwyh3IEIY0SWLKTygXM9.jpg</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="change_language_settings">Change Language Settings</string>
     <string name="appwidget_text">My Favorite Movie</string>
     <string name="empty_text">NO DATA</string>
     <string name="add_widget">Add widget</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">reminder</string>
+    <string name="setting">Setting</string>
+    <string name="change_lang">Language Settings</string>
+    <string name="change_lang_sub">Change Language</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="daily_reminder_sub">Reminder for return to app</string>
+    <string name="daily_release">Release Reminder</string>
+    <string name="daily_release_sub">Reminder today release</string>
+    <string name="reminder_activated">The reminder is activated</string>
+    <string name="reminder_disabled">The reminder is disabled</string>
+    <string name="release_notif">has been release today!</string>
+    <string name="miss_notif">Movie Catalogue missing you!</string>
+
 </resources>
