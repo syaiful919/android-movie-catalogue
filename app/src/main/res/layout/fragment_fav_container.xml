@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.HomeContainerFragment">
+    tools:context=".fragment.FavContainerFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -15,6 +15,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
+        android:paddingTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

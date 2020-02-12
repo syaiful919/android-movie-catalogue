@@ -1,6 +1,5 @@
 package com.syaiful.moviecatalogue.fragment;
 
-
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,17 +30,14 @@ import com.syaiful.moviecatalogue.viewmodel.MovieViewModel;
 import java.util.ArrayList;
 import java.util.Objects;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class MovieFragment extends Fragment {
+public class TvFragment extends Fragment {
     private RecyclerView rvMovies;
     private MovieViewModel movieViewModel;
     private RvHomeAdapter adapter;
     private ProgressBar progressBar;
     private SearchView searchView;
 
-    public MovieFragment() {
+    public TvFragment() {
         // Required empty public constructor
     }
 
@@ -71,11 +66,11 @@ public class MovieFragment extends Fragment {
     }
 
     private void getListMovies() {
-        movieViewModel.setMovie();
+        movieViewModel.setTvShow();
         showLoading();
-        movieViewModel.getMovie().observe(this, new Observer<ArrayList<Movie>>() {
-                @Override
-                public void onChanged(ArrayList<Movie> movies) {
+        movieViewModel.getTvShow().observe(this, new Observer<ArrayList<Movie>>() {
+            @Override
+            public void onChanged(ArrayList<Movie> movies) {
                 if (movies != null) {
                     adapter.setData(movies);
                     hideLoading();
@@ -99,9 +94,9 @@ public class MovieFragment extends Fragment {
     }
 
     private void search(String query){
-        movieViewModel.setSearchMovie(query);
+        movieViewModel.setSearchTvShow(query);
         showLoading();
-        movieViewModel.getSearchMovie().observe(this, new Observer<ArrayList<Movie>>() {
+        movieViewModel.getSearchTvShow().observe(this, new Observer<ArrayList<Movie>>() {
             @Override
             public void onChanged(ArrayList<Movie> movies) {
                 if (movies != null) {

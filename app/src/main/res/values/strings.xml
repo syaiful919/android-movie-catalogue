@@ -115,5 +115,6 @@
     <string name="reminder_disabled">The reminder is disabled</string>
     <string name="release_notif">has been release today!</string>
     <string name="miss_notif">Movie Catalogue missing you!</string>
+    <string name="search">search</string>
 
 </resources>

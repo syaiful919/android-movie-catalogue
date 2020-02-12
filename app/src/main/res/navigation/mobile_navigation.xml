@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home_container">
+    app:startDestination="@+id/navigation_movie">
 
     <fragment
-        android:id="@+id/navigation_home_container"
-        android:name="com.syaiful.moviecatalogue.fragment.HomeContainerFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home_container"
+        android:id="@+id/navigation_movie"
+        android:name="com.syaiful.moviecatalogue.fragment.MovieFragment"
+        android:label="@string/tab_movie_title"
+        tools:layout="@layout/fragment_movie"
+        />
+
+    <fragment
+        android:id="@+id/navigation_tv"
+        android:name="com.syaiful.moviecatalogue.fragment.TvFragment"
+        android:label="@string/tab_tv_title"
+        tools:layout="@layout/fragment_movie"
         />
 
     <fragment

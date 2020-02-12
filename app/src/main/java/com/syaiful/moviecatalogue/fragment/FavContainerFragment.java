@@ -3,6 +3,8 @@ package com.syaiful.moviecatalogue.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -29,14 +31,15 @@ public class FavContainerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fav_container, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setHasOptionsMenu(true);
 
         SPFavAdapter sectionsPagerAdapter = new SPFavAdapter(this, getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.view_pager);
@@ -44,6 +47,12 @@ public class FavContainerFragment extends Fragment {
         TabLayout tabs = view.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.fav_menu, menu);
+        super.onCreateOptionsMenu(menu,inflater);
     }
 
 }

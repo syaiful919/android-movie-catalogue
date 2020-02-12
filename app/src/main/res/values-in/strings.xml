@@ -113,5 +113,6 @@
     <string name="reminder_disabled">Pengingat dinonaktifkan</string>
     <string name="release_notif">rilis hari ini!</string>
     <string name="miss_notif">Movie Catalogue kangen kamu!</string>
+    <string name="search">pencarian</string>
 
 </resources>
