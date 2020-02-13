@@ -13,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.syaiful.moviecatalogue.R;
 import com.syaiful.moviecatalogue.helper.MappingHelper;
 import com.syaiful.moviecatalogue.model.Movie;
-import com.syaiful.moviecatalogue.widget.FavWidget;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -71,28 +70,33 @@ public class StackRemoteViewsFactory implements RemoteViewsService.RemoteViewsFa
 
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.widget_item);
 
-        try {
-            Bitmap poster = Glide.with(mContext)
-                    .asBitmap()
-                    .load(mWidgetItems.get(position).getPoster())
-                    .submit(250,500)
-                    .get();
+        if(mWidgetItems.size() > 0){
+            try {
+                Bitmap poster = Glide.with(mContext)
+                        .asBitmap()
+                        .load(mWidgetItems.get(position).getPoster())
+                        .submit(250,500)
+                        .get();
 
-            rv.setImageViewBitmap(R.id.imageView, poster);
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+                rv.setImageViewBitmap(R.id.imageView, poster);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (IndexOutOfBoundsException e){
+                e.printStackTrace();
+            }
+
+            Bundle extras = new Bundle();
+            extras.putInt(FavWidget.EXTRA_ITEM, position);
+            extras.putString(FavWidget.EXTRA_TITLE, mWidgetItems.get(position).getName());
+            Intent fillInIntent = new Intent();
+            fillInIntent.putExtras(extras);
+
+            rv.setOnClickFillInIntent(R.id.imageView, fillInIntent);
         }
-
-        Bundle extras = new Bundle();
-        extras.putInt(FavWidget.EXTRA_ITEM, position);
-        extras.putString(FavWidget.EXTRA_TITLE, mWidgetItems.get(position).getName());
-        Intent fillInIntent = new Intent();
-        fillInIntent.putExtras(extras);
-
-        rv.setOnClickFillInIntent(R.id.imageView, fillInIntent);
         return rv;
+
     }
 
     @Override

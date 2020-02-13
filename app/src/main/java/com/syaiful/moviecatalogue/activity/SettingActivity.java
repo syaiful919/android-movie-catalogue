@@ -89,7 +89,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void setDailyReminder() {
-        FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name));
+        FirebaseMessaging.getInstance().subscribeToTopic("reminder");
         pref.setReminderpPref(true);
         showToastActivated();
     }
@@ -101,7 +101,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void cancelDailyReminder() {
-        FirebaseMessaging.getInstance().unsubscribeFromTopic(getString(R.string.default_notification_channel_name));
+        FirebaseMessaging.getInstance().unsubscribeFromTopic("reminder");
         pref.setReminderpPref(false);
         showToastDisabled();
     }

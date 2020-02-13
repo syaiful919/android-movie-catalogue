@@ -11,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -187,8 +186,8 @@ public class MovieFragment extends Fragment {
     }
 
     @Override
-    public void onPause(){
-        super.onPause();
+    public void onStop(){
+        super.onStop();
         searchView.setIconified(true);
     }
 
