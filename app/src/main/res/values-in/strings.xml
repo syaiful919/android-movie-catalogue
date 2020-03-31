@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieCatalogue</string>
+    <string name="movie_name_dummy">My Hero Academia: Two Heroes</string>
+    <string name="movie_description_dummy">Dalam Boku no Hero Academia Movie: Futari no Hero, Deku dan All might mendapatkan undangan untuk datang ke I-Expo, sebuah pameran kelas dunia yang memamerkan kekuatan Bakat serta inovasi item Pahlawan! Di tengah semua kemeriahan I-Expo, Deku bertemu dengan Melissa, seorang gadis yang tak memiliki bakat sama seperti dirinya dulu. Dan tiba-tiba, sistem keamanan I-Expo dibajak oleh kawanan penjahat. Dalam situasi genting yang mengancam banyak nyawa tersebut, hanya satu orang yang bisa menyelesaikannya, sang simbol perdamaian, All Might.</string>
+    <string name="overview">Sinopsis</string>
+
+    <string name="tab_movie_title">Film</string>
+    <string name="tab_tv_title">Acara TV</string>
+
+    <string-array name="movie_names">
+        <item>My Hero Academia: Two Heroes</item>
+        <item>Flavors of Youth</item>
+        <item>I Want to Eat Your Pancreas</item>
+        <item>Mirai</item>
+        <item>Doraemon the Movie: Nobita\'s Treasure Island</item>
+        <item>Pokémon the Movie: The Power of Us</item>
+        <item>Detective Conan Zero the Enforcer</item>
+        <item>Attack on Titan: The Roar of Awakening</item>
+        <item>Digimon Adventure Tri. - Chapter 6: Future</item>
+        <item>One Piece: Episode of Sky Island</item>
+    </string-array>
+
+    <string-array name="movie_descriptions">
+        <item>Dalam Boku no Hero Academia Movie: Futari no Hero, Deku dan All might mendapatkan undangan untuk datang ke I-Expo, sebuah pameran kelas dunia yang memamerkan kekuatan Bakat serta inovasi item Pahlawan! Di tengah semua kemeriahan I-Expo, Deku bertemu dengan Melissa, seorang gadis yang tak memiliki bakat sama seperti dirinya dulu. Dan tiba-tiba, sistem keamanan I-Expo dibajak oleh kawanan penjahat. Dalam situasi genting yang mengancam banyak nyawa tersebut, hanya satu orang yang bisa menyelesaikannya, sang simbol perdamaian, All Might.</item>
+        <item>Antologi berisi tiga cerita pendek yang berjudul “Hidamari no Choushoku”, “Chiisana Fashion Show“, dan “Shanghai Koi”. Ketiga judul tersebut berlatar cerita di tiga kota yang berbeda di Cina. “Hidamari no Choushoku” adalah tentang seorang pemuda yang bekerja di Beijing dan neneknya yang berada di kampung. “Chiisana Fashion Show” adalah tentang dua orang bersaudari yang tinggal di Guangzhou. Lalu “Shanghai Koi” berlatar di Shanghai dan merupakan karya penghormatan untuk Byousoku 5 Centimeter (5 Sentimeter per detik).</item>
+        <item>Ketika musim semi di bulan April datang dan bunga sakura masih bermekaran, seorang kutu buku bernama Shiga Haruki menemukan sebuah buku di ruang tunggu rumah sakit. Sampul buku tersebut bertulisan “hidup saat sekarat”. Lalu dia tahu kalau buku harian itu adalah milik teman sekelasnya yang sangat populer dan ceria, Yamauchi Sakura. Gadis itu berkata bahwa dia menderita penyakit pankreas dan hanya memiliki waktu yang terbatas. Berusaha untuk mempertahankan kehidupannya senormal mungkin, Sakura memutuskan untuk menjalani kehidupnnya dengan merahasiakan penyakitnya. Karena semangat dan tindakan Sakura yang tak terduga, perasaan Haruki mulai berubah.</item>
+        <item>Saat Kun-chan yang berusia empat tahun bertemu dengan adik perempuannya yang baru lahir, dunianya mulai tidak karuan. Adiknya diberi nama Mirai (artinya “masa depan”, bayi itu dengan cepat memenangkan hati seluruh anggota keluarga Kun-chan. Saat ibunya kembali bekerja, dan ayahnya mengurus rumah tangga, Kun-chan menjadi semakin cemburu pada Mirai… Sampai suatu hari dia pergi ke taman, di sana dia bertemu dengan orang asing dari masa lalu dan masa depan — termasuk adik perempuannya, Mirai, masa remaja. Kun-chan dan Mirai remaja melakukan perjalanan melalui ruang dan waktu, mengungkap kisah luar biasa keluarga mereka. Tapi kenapa Mirai datang dari masa depan?</item>
+        <item>Doraemon, Nobita, Shizuka, Gian, dan Suneo berangkat bertualang di Laut Karibia. Nobita menjadi kapten kapal dan melawan musuh-musuhnya. Shizuka diculik, dan badai menghalangi perjalanan mereka. Mini-Dora membantu Nobita dan teman-teman dalam perjalanan mereka. Pulau misterius yang muncul tiba-tiba di Tengah Lautan. Kebenaran tersembunyi dalam harta yang tersembunyi di sana.</item>
+        <item>Film ini berlatar di Kota Fura, sebuah tempat dimana orang-orang tinggal bersama dengan angin dan setiap tahunnya dilaksanakan festival angin. Di hari terakhir festival angin, Pokémon legendaris Lugia akan muncul dan memberikan orang-orang angin yang diberkati.</item>
+        <item>Terjadi ledakan mendadak di fasilitas “Edge of Ocean” yang baru dibangun di teluk Tokyo. Bayangan Tōru Amuro, yang bekerja untuk Biro Keamanan Badan Kepolisian Nasional sebagai Zero, muncul di lokasi tersebut. Selain itu, karakter “Tiga Wajah” dikenal sebagai Rei Furuya sebagai detektif dan murid Kogoro Mōri, dan dia juga dikenal sebagai anggota Bourbon sebagai anggota Organisasi Hitam. Kogorō ditangkap sebagai tersangka dalam kasus ledakan tersebut. Conan melakukan penyelidikan untuk membuktikan kepolosan Kogoro, tapi Amuro menghalangi.</item>
+        <item>Merupakan film kompilasi musim ke-2 dari anime Attack on Titan</item>
+        <item>Digimon Adventure tri. 6: Bokura no Mirai merupakan bagian keenam dari movie Digimon Adventure Tri dan merupakan bagian terakhir.</item>
+        <item>Bercerita tentang perjalanan Luffy menuju ke pulau selanjutnya yang ternyata jarum kompas mengarah ke arah langit. Sembari mencari informasi, ternyata ada kabar bahwa ada sebuah pulau di langit yang kebenarannya hanya seperti dongeng belaka. Namun Luffy dkk, mempercayai hal tersebut serta mereka bertemu dengan orang-orang yang memiliki sejarah dan keterlibatan mengenai pulau langit tersebut.</item>
+    </string-array>
+
+    <string-array name="movie_posters">
+        <item>https://image.tmdb.org/t/p/w1280/5Ui54VS5oxmPzzdEGJEUkW0uESI.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/ueHeH5ergeHx27L4SCI9qlmwczA.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/vHdVU0HyyB6k6kuYt8qjwTz9one.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/b9XvI4Nehzi0nXyNVD6DtT39P6l.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/xiLRClQmKSVAbiu6rgCRzNQjcSX.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/eakBFzG1dZn0uouBgv6kYtPXLkT.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/skJl9GXEXtKoPNtsgslS2swO3zp.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/nLe47v3H04j5he8b4Jk2WTTUwjw.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/85RWLY80P6NRcwl7CHmh0fAAGyQ.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/rlXwxRqZa0dMssgYLQeoNo4WiXg.jpg</item>
+    </string-array>
+
+    <string-array name="tv_show_names">
+        <item>Death Note</item>
+        <item>Fullmetal Alchemist: Brotherhood</item>
+        <item>Steins;Gate</item>
+        <item>Psycho-Pass</item>
+        <item>Parasyte -the maxim-</item>
+        <item>ERASED</item>
+        <item>Terror in Resonance</item>
+        <item>Noragami</item>
+        <item>Assassination Classroom</item>
+        <item>Blue Exorcist</item>
+    </string-array>
+
+    <string-array name="tv_show_descriptions">
+        <item>Death Note bercerita tentang seorang pelajar (Light Yagami) yang merasa kalau dunia ini sudah membusuk oleh kejahatan. dan dia merasa bosan atas kadaan dunia yang seperti itu. Hal itu juga dirasakan oleh sang dewa kematian (Ryuk) yang merasa bosan atas kehampaan hidupnya di dunia dewa kematian. Ryuk, yang memiliki Death Note, merasa kalau akan lebih menarik jika buku itu dijatuhkan di dunia manusia agar dia terhibur. Death Note sendiri adalah buku yang memiliki kekuatan untuk membunuh. Orang yang namanya ditulis dalam Death Note akan segera mati. Dan buku itu pun ditemukan oleh Light, pelajar jenius nomer satu di Jepang. Atas dasar konsep pemikirannya “bahwa dunia harus dihapuskan dari tindak kejahatan”, Light menggunakan Death Note untuk membunuh semua penjahat agar tujuannya tercapai. Namun, tak semudah itu dia melakukannya, karena dunia pun merasakan kalau kematian masal para penjahat terasa janggal. Datanglah L, remaja jenius yang berusaha menangkap Kira (sebutan bagi Light).</item>
+        <item>Fullmetal Alchemist: Brotherhood – Di dunia ini terdapat alchemist, orang yang mempelajari dan melakukan seni alkimia transmutasi-untuk memanipulasi objek dan mengubah satu objek ke yang lain. Mereka dibatasi oleh hukum dasar alkimia dalam rangka untuk mendapatkan sesuatu yang berharga harus mengorbankan sesuatu dari nilai yang sama. Karakter utama adalah alchemist terkenal Edward Elric yang dikenal sebagai Fullmetal Alchemist yang hampir kehilangan adiknya, Alphonse, dalam kecelakaan alkimia. Edward berhasil mentransmutasi jiwa adiknya kedalam baju Jiarah. Sementara ia berhasil menyelamatkan nyawa kakaknya, dia membayar dengan harga yang mengerikan yaitu anggota badannya. Untuk mendapatkan kembali tubuh nya, kedua saudara ini memulai perjalanan untuk menemukan Batu Bernama Philosoperstone.</item>
+        <item>Anime ini bercerita tentang Okabe Rintaro, seorang pemuda autis nyentrik yang suka berkhayal dan menyebut dirinya sebagai seorang mad scientist Bersama dengan ahli komputer bernama Hashida Itaru dan gadis ‘kikuk’ bernama Shiina Mayuri, mereka mendirikan laboratorium kecil untuk bereksperimen terhadap benda-benda elektronik. Lewat sebuah kebetulan luar biasa, mereka tak sengaja menciptakan sebuah mesin waktu sederhana dari hasil modifikasi sebuah handphone dan microwave. Meski masih sangat primitif, mesin waktu tersebut terbukti benar-benar bisa mengubah masa lalu. Dengan bantuan Makise Kurisu sang gadis jenius, Okabe pun terus melakukan eksperimen demi memahami cara kerja mainan barunya. ..Layaknya kisah-kisah bertema time travel lainnya, bukan kebahagiaan lah yang mereka dapatkan setelah menciptakan mesin waktu tersebut, melainkan beragam peristiwa mengerikan yang justru timbul akibat adanya mesin tersebut. Okabe dan kawan-kawan terjerumus dalam konspirasi besar ulah organisasi SERN. Dengan segala keterbatasan, mereka harus berjuang untuk menghindari bencana besar yang membuat dunia di masa depan menjadi distopia.</item>
+        <item>Berlangsung di masa depan, masa di mana kita secara praktis mampu untuk mengukur dan menilai kepribadian dan pikiran seorang individu. Informasi ini direkam dan diproses, dan istilah “Psycho-Pass” mengacu pada standar yang digunakan untuk mengukur sikap seseorang. Cerita utamanya seputar Shinya Kougami sang “Petugas Pelaksana”, yang ditugaskan untuk menangani kriminalitas di berbagai belahan dunia.</item>
+        <item>Kiseijuu: Sei no Kakuritsu bercerita tentang suatu makhluk misterius yang disebut parasyte. Makhluk tersebut mampu mengambil alih seluruh tubuh manusia dengan cara menginfeksi otaknya. Ketika sudah berhasil mengambil alih tubuh manusia, parasyte punya kecenderungan untuk membunuh dan memakan sesama manusia agar bisa bertahan hidup. Akibatnya, banyak manusia yang mati di tangan parasyte. Dan mirisnya, tidak ada satupun orang yang tau kalo pembunuhan itu ulahnya parasyte. Kecuali satu orang : Izumi Shinichi. Sebenarnya, Shinichi juga merupakan korban parasyte. Hanya saja, parasyte yang menyerang Shinichi gagal menginfeksi otaknya. Dan hanya berhasil mengambil alih tangan kanannya saja. Sebagai satu-satunya orang yang mengetahui fakta dibalik pembunuhan tersebut, dia merasa punya tanggung jawab untuk menghentikan kebiadabannya parasyte. Oleh karena itu, dia pun meminta tolong ke parasyte yang ada di tangan kanannya untuk membantunya dalam memberantas semua parasyte yang ada di muka bumi.</item>
+        <item>Penulis manga Satoru Fujinuma berjuang melawan rasa takut dalam mengekspresikan dirinya. Namun, ia memiliki kemampuan supranaturaldan dipaksa untuk mencegah kematian dan bencana dengan caradikirim kembali dalam waktu sebelum insiden itu terjadi, ia kembaliberulang kali sampai suatu kecelakaan bisa dicegah. Suatu hari, ia terlibat dalam sebuah kecelakaanyang membuatnya dijebak dan menjadi seorang pembunuh. Karena begitu putus asa menyelamatkan korban, ia mengirimkan dirinya kembali masa lalu sampai ia menyadari dirinyakembali menjadi anak SD, dan berada pada satu bulan sebelum teman sekelasnya yaitu KayoHinazuki menghilang. Satoru sekarang menjalankan misi baru untuk menyelamatkan Kayo dan memecahkan misteri di balik kepergiannya.</item>
+        <item>Dalam versi alternatif masa kini, Tokyo telah hancur oleh serangan teroris yang mengejutkan, dan satu-satunya petunjuk identitas pelakunya adalah video aneh yang diunggah ke internet. Polisi, bingung dengan petunjuk samar-samar itu, tidak berdaya untuk menghentikan teror yang menyebar di tokyo. Sementara pencarian untuk dalang kriminal yang harus bertangung jawab atas tragedi ini, merujuk pada dua anak-anak misterius yang seharusnya tidak pernah ada. mereka menyebut diri mereka dengan nama Sembilan dan Dua Belas, dan membentuk organisasi yang bernama “Sphinx,” organisasi yang menghilangkan kenyamanan orang-orang.</item>
+        <item>Yato adalah dewa kecil yang tidak memiliki bahkan sebuah kuil tunggal. Dalam rangka membangun kuil sendiri dan memperoleh pengakuan sebagai dewa, ia scrawls nomor selnya di dinding kamar mandi di pusat kota mengatakan orang-orang yang akan membantu mereka dalam pertukaran untuk korban 5-yen, menjadi gadungan “pengiriman dewa. “Hiyori, putri dari keluarga terhormat, hampir tewas dalam kecelakaan lalu lintas, namun diselamatkan oleh Yato. Hal ini menyebabkan dia menjadi “Hanyou,” orang yang bisa keluar dari tubuhnya dalam bentuk jiwa. Dia mengejar Yato bawah, dan mereka mulai bekerja sama untuk membantu Yato diakui. Yato juga menemukan seorang anak bernama Yukine yang menjadi Regalia, “harta suci” yang dapat digunakan oleh dewa sebagai senjata untuk melawan. Mereka bertiga pertempuran hantu yang membawa kerugian bagi manusia sebagai gelap tersembunyi sejarah Yato secara bertahap terungkap.</item>
+        <item>Sebuah cerita lucu dan penuh aksi tentang kelas penyesuaikan diri yang mencoba untuk membunuh guru baru mereka yaitu sebuah gurita alien dengan kekuatan aneh dan kekuatan super! Guru baru itu baru saja menghancurkan bulan dan mengancam akan menghancurkan bumi, kecuali murid-muridnya bisa menghancurkan dia dulu. Yang membuat semuanya jadi lebih rumit adalah karena ia adalah guru terbaik yang pernah mereka miliki!</item>
+        <item>Dunia ini memiliki dua dimensi yang menjadi satu, layaknya cermin. Pertama adalah dunia tempat tinggal manusia, yaitu Assiah. Lalu yang lainnya adalah dunia tempat tinggal iblis, Gehenna. Menyatukan kedua dunia itu adalah hal yang sangat mustahil Tetapi iblis dapat masuk ke dunia manusia dengan merasuki apapun yang ada. Satan yang tak memiliki bentuk, ingin membuat wujudnya di dunia manusia dan ingin menyatukan kedua dunia itu. Rin, anak Satan yang dalam wujud manusia dijadikan rencana untuk menyatukan dua dunia.</item>
+    </string-array>
+
+    <string-array name="tv_show_posters">
+        <item>https://image.tmdb.org/t/p/w1280/g8hHbsRmHYoWYizhWCk87vpkrmy.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/aYVBoq5MEtOBLlivSzDSpteZfXV.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/6iysgZr6Upm5RlAlVFo5f4D9euu.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/aX6S3P8xiz9nJwXjaka5e9kT6f4.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/nLuWoomsag1s5wX2SSamHTnk348.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/d4IEwPH9VY3R8LuWHXhsb1iScdz.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/cUmUF9DEgbNCsbEbgmDP6bg8ZOF.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/ac4qpPgSbK5kf5yhQHNmtzJdfCF.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/aE6DssarIB4g1vFs8uW0rjuL7Ux.jpg</item>
+        <item>https://image.tmdb.org/t/p/w1280/6awFumOfwyh3IEIY0SWLKTygXM9.jpg</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+</resources>
